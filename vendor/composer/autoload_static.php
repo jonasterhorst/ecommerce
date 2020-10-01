@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit982d45f67387f66666c7493cc8c1eb60
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/onetech/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'o' => 
+        array (
+            'onetech\\' => 8,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'onetech\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/onetech/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -41,7 +51,8 @@ class ComposerStaticInit982d45f67387f66666c7493cc8c1eb60
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInit982d45f67387f66666c7493cc8c1eb60::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit982d45f67387f66666c7493cc8c1eb60::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit982d45f67387f66666c7493cc8c1eb60::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit982d45f67387f66666c7493cc8c1eb60::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit982d45f67387f66666c7493cc8c1eb60::$classMap;
 

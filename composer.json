@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "": "vendor\\onetech\\php-classes\\src"
+            "onetech\\": "vendor\\onetech\\php-classes\\src"
         }
     }
 }
